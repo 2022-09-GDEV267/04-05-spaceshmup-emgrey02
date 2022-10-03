@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-    [Header("Set In Inspector")]
-
-
-    [Header("Set Dynamically")]
-
-
    
     private void Awake()
     {
