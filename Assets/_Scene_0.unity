@@ -1003,7 +1003,8 @@ MonoBehaviour:
   speed: 30
   rollMult: -45
   pitchMult: 30
-  shieldLevel: 1
+  gameRestartDelay: 2
+  _shieldLevel: 1
 --- !u!4 &1342965580
 Transform:
   m_ObjectHideFlags: 0
