@@ -270,7 +270,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6b1daafed4b5864696ab2969a670a88, type: 2}
+  - {fileID: 2100000, guid: a3d45173f566ae24daa102c466bfcd94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -357,6 +357,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabEnemies:
   - {fileID: 4432241808185050153, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
+  - {fileID: 4432241808185050153, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
+  - {fileID: 4432241808185050153, guid: a69aa768d15cba34b96a5422e50dc9b4, type: 3}
+  - {fileID: 3999343731155276145, guid: 4f6603c8234f9c442bffce6c98737a5e, type: 3}
+  - {fileID: 3999343731155276145, guid: 4f6603c8234f9c442bffce6c98737a5e, type: 3}
+  - {fileID: 3580903968104380535, guid: f36396c825b1f164e9cd0c1d488d8c33, type: 3}
+  - {fileID: 3580903968104380535, guid: f36396c825b1f164e9cd0c1d488d8c33, type: 3}
+  - {fileID: 8676892491916573553, guid: 3c5a8bbcef5788f46a0d0b5c2b33d828, type: 3}
+  - {fileID: 8676892491916573553, guid: 3c5a8bbcef5788f46a0d0b5c2b33d828, type: 3}
+  - {fileID: 1653306500737620405, guid: f2279215c255ce545b080a1357c7135e, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
   weaponDefinitions:
@@ -785,7 +794,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6b1daafed4b5864696ab2969a670a88, type: 2}
+  - {fileID: 2100000, guid: a3d45173f566ae24daa102c466bfcd94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
