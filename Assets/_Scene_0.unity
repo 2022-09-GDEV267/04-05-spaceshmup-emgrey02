@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 1295224118}
   - component: {fileID: 1295224117}
   - component: {fileID: 1295224116}
-  - component: {fileID: 1295224115}
+  - component: {fileID: 1295224120}
   m_Layer: 0
   m_Name: StarfieldBG
   m_TagString: Untagged
@@ -928,18 +928,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1295224115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295224114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068597007208b5040be849aebe1595f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1295224116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1019,6 +1007,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1295224120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295224114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e675c3ac691245e4e9d15cfec5893f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poi: {fileID: 1342965577}
+  panels:
+  - {fileID: 625516129}
+  - {fileID: 209590096}
+  scrollSpeed: -30
+  motionMult: 0.25
 --- !u!1 &1342965577
 GameObject:
   m_ObjectHideFlags: 0
