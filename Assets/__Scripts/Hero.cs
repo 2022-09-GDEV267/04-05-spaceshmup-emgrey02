@@ -21,15 +21,20 @@ public class Hero : MonoBehaviour {
     //holds ref to last triggering GameObject
     private GameObject lastTriggerGo = null;
 
+    //declare a new delegate type WeaponFireDelegate
+    public delegate void WeaponFireDelegate();
+
+    //Create a WeaponFireDelegate field named fireDelegate
+    public WeaponFireDelegate fireDelegate;
+
     void Awake()
     {
         if (S == null)
         {
             S = this;
-        } else
-        {
-            Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
         }
+
+        fireDelegate += TempFire;
     }
 	
 	// Update is called once per frame
@@ -48,10 +53,12 @@ public class Hero : MonoBehaviour {
         //rotate ship to make it feel more dynamic
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
-        //allow ship to fire
-        if (Input.GetKeyDown(KeyCode.Space))
+        //use the fireDelegate to fire Weapons
+        //first, make sure the button is pressed: Axis('Jump')
+        //then ensure that fireDelegate isn't null to avoid an error
+        if (Input.GetAxis("Jump") == 1 && fireDelegate != null)
         {
-            TempFire();
+            fireDelegate();
         }
     }
 
@@ -60,7 +67,11 @@ public class Hero : MonoBehaviour {
         GameObject projGO = Instantiate<GameObject>(projectilePrefab);
         projGO.transform.position = transform.position;
         Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
-        rigidB.velocity = Vector3.up * projectileSpeed;
+
+        Projectile proj = projGO.GetComponent<Projectile>();
+        proj.type = WeaponType.spread;
+        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
+        rigidB.velocity = Vector3.up * tSpeed;
     }
 
     void OnTriggerEnter(Collider other)

@@ -362,29 +362,29 @@ MonoBehaviour:
   weaponDefinitions:
   - type: 1
     letter: B
-    color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0}
+    color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
-    projectileColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.2
     velocity: 50
   - type: 2
     letter: S
-    color: {r: 0.3250267, g: 0.6525741, b: 0.8301887, a: 0}
+    color: {r: 0.3250267, g: 0.6525741, b: 0.8301887, a: 1}
     projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
-    projectileColor: {r: 0.3254902, g: 0.6509804, b: 0.8313726, a: 0}
+    projectileColor: {r: 0.3254902, g: 0.6509804, b: 0.8313726, a: 1}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
   - type: 6
     letter: O
-    color: {r: 0.36165005, g: 0.5943396, b: 0.39064386, a: 0}
+    color: {r: 0.36165005, g: 0.5943396, b: 0.39064386, a: 1}
     projectilePrefab: {fileID: 0}
-    projectileColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 0}
+    projectileColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
     damageOnHit: 0
     continuousDamage: 0
     delayBetweenShots: 0
@@ -869,6 +869,18 @@ PrefabInstance:
     - target: {fileID: 4052337362685714, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052337362685714, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052337362685714, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052337362685714, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
