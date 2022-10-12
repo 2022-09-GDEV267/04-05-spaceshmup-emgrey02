@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4356110044819572}
   - component: {fileID: 33784065768116812}
   - component: {fileID: 23892170976807620}
-  - component: {fileID: 540536420515735144}
   m_Layer: 0
   m_Name: Collar
   m_TagString: Untagged
@@ -84,18 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &540536420515735144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456197138613832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a93ab72cded7a948a37790d28abe2f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1802592062026012
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,3 +212,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a93ab72cded7a948a37790d28abe2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 0
+  def:
+    type: 0
+    letter: 
+    color: {r: 1, g: 1, b: 1, a: 1}
+    projectilePrefab: {fileID: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
+    damageOnHit: 0
+    continuousDamage: 0
+    delayBetweenShots: 0
+    velocity: 20
+  collar: {fileID: 0}
+  lastShotTime: 0
