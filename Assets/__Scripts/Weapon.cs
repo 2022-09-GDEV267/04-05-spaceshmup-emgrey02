@@ -13,7 +13,7 @@ public enum WeaponType
     none, //default/ no weapon
     blaster, //simple blaster
     spread, //two shots simultaneously
-    phaser, //[NI] shots that move in waves
+    phaser, //shots that move in waves
     missile, //[NI] Homing missiles
     laser, //[NI] Damage over time
     shield //raise shieldLvel
@@ -49,10 +49,14 @@ public class Weapon : MonoBehaviour
     public GameObject collar;
     public float lastShotTime; // Time last shot was fired
 
+    private float birthTime;
+
     private Renderer collarRend;
 
     void Start()
     {
+        birthTime = Time.time;
+
         collar = transform.Find("Collar").gameObject;
         collarRend = collar.GetComponent<Renderer>();
 
@@ -145,6 +149,20 @@ public class Weapon : MonoBehaviour
                 p.transform.rotation = Quaternion.AngleAxis(-20, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
 
+                break;
+
+            case WeaponType.phaser:
+                float age = Time.time - birthTime;
+                float theta = Mathf.PI * 2 * age / 2;
+                float sin = Mathf.Sin(theta);
+
+                p = MakeProjectile();
+                p.transform.rotation = Quaternion.AngleAxis(sin * 2, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
+
+                p = MakeProjectile();
+                p.transform.rotation = Quaternion.AngleAxis(-sin * 2, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
                 break;
         }
     }
