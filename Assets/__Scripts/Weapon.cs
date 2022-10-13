@@ -157,11 +157,11 @@ public class Weapon : MonoBehaviour
                 float sin = Mathf.Sin(theta);
 
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(sin * 2, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(sin * 5, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
 
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(-sin * 2, Vector3.back);
+                p.transform.rotation = Quaternion.AngleAxis(-sin * 5, Vector3.back);
                 p.rigid.velocity = p.transform.rotation * vel;
                 break;
         }

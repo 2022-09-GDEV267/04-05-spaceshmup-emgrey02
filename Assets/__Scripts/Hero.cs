@@ -37,7 +37,7 @@ public class Hero : MonoBehaviour {
 
         //reset weapons to start _Hero with 1 blaster
         ClearWeapons();
-        weapons[0].SetType(WeaponType.blaster);
+        weapons[0].SetType(WeaponType.phaser);
         
     }
 	
