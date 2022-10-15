@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 /// <summary>
 /// This is an enum of the various possible weapon types.
@@ -49,14 +50,10 @@ public class Weapon : MonoBehaviour
     public GameObject collar;
     public float lastShotTime; // Time last shot was fired
 
-    private float birthTime;
-
     private Renderer collarRend;
 
     void Start()
     {
-        birthTime = Time.time;
-
         collar = transform.Find("Collar").gameObject;
         collarRend = collar.GetComponent<Renderer>();
 
@@ -152,22 +149,20 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponType.phaser:
-                float age = Time.time - birthTime;
-                float theta = Mathf.PI * 2 * age / 2;
-                float sin = Mathf.Sin(theta);
+                p = MakeProjectile();
+                Vector3 newVel = vel.normalized;
+                newVel.x = Mathf.Sin(Mathf.PI * 2 * Time.time) * 2 + 4;
+                newVel.y *= vel.magnitude;
+                p.rigid.velocity = newVel;
 
                 p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(sin * 5, Vector3.back);
-                p.rigid.velocity = p.transform.rotation * vel;
-
-                p = MakeProjectile();
-                p.transform.rotation = Quaternion.AngleAxis(-sin * 5, Vector3.back);
-                p.rigid.velocity = p.transform.rotation * vel;
+                Vector3 new1Vel = vel.normalized;
+                new1Vel.x = Mathf.Sin(Mathf.PI * 2 * Time.time) * -2 - 4;
+                new1Vel.y *= vel.magnitude;
+                p.rigid.velocity = new1Vel;
                 break;
         }
     }
-
-
 
     public Projectile MakeProjectile()
     {
